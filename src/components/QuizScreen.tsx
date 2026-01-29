@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timer } from 'lucide-react';
+import { Timer, Home } from 'lucide-react';
 import { QuizQuestion, QuizCategory } from '../types';
 import { CATEGORY_INFO } from '../data/categoryInfo';
 
@@ -12,6 +12,7 @@ interface QuizScreenProps {
   selectedAnswer: number | null;
   showResult: boolean;
   onAnswer: (index: number) => void;
+  onBackToTitle: () => void;
 }
 
 export const QuizScreen: React.FC<QuizScreenProps> = ({
@@ -22,7 +23,8 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   selectedCategory,
   selectedAnswer,
   showResult,
-  onAnswer
+  onAnswer,
+  onBackToTitle
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center p-4">
@@ -32,9 +34,18 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
           <div className="text-lg font-bold text-gray-800">
             問題 {quizIndex + 1} / {totalQuestions}
           </div>
-          <div className={`text-3xl font-bold ${quizTimer <= 3 ? 'text-red-500 animate-pulse' : 'text-blue-600'}`}>
-            <Timer className="inline mr-2" />
-            {quizTimer}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={onBackToTitle}
+              className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-bold transition-colors flex items-center gap-2"
+            >
+              <Home size={20} />
+              タイトルに戻る
+            </button>
+            <div className={`text-3xl font-bold ${quizTimer <= 3 ? 'text-red-500 animate-pulse' : 'text-blue-600'}`}>
+              <Timer className="inline mr-2" />
+              {quizTimer}
+            </div>
           </div>
         </div>
 

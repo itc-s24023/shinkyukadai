@@ -77,6 +77,18 @@ export const useQuiz = () => {
     return quizIndex === quizData.length - 1 && showResult;
   };
 
+  const resetQuiz = () => {
+    setQuizData([]);
+    setQuizIndex(0);
+    setQuizAnswers([]);
+    setQuizTimes([]);
+    setQuizTimer(10);
+    setQuizStartTime(0);
+    setSelectedAnswer(null);
+    setShowResult(false);
+    setSelectedCategory('random');
+  };
+
   return {
     quizData,
     quizIndex,
@@ -89,6 +101,7 @@ export const useQuiz = () => {
     startQuiz,
     handleQuizAnswer,
     getQuizResult,
-    isQuizComplete
+    isQuizComplete,
+    resetQuiz
   };
 };

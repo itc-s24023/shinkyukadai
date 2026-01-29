@@ -15,8 +15,12 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
   onShowRanking
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-      <div className="text-center">
+    <div className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/background.jpg')" }}>
+      {/* 背景オーバーレイ */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      {/* コンテンツ */}
+      <div className="text-center relative z-10">
         <h1 className="text-6xl font-bold text-white mb-4 animate-bounce drop-shadow-lg">
           🎮 クイズゲーム
         </h1>

@@ -12,8 +12,12 @@ export const CategorySelectScreen: React.FC<CategorySelectScreenProps> = ({
   onBack
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center p-4">
-      <div className="max-w-6xl w-full">
+    <div className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/it.jpeg')" }}>
+      {/* 背景オーバーレイ */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 to-indigo-900/60"></div>
+      
+      {/* コンテンツ */}
+      <div className="max-w-6xl w-full relative z-10">
         <h2 className="text-4xl font-bold text-white text-center mb-8 drop-shadow-lg">カテゴリーを選択</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
           {(Object.keys(CATEGORY_INFO) as QuizCategory[]).map((cat) => {

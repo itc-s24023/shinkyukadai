@@ -76,6 +76,10 @@ const App = () => {
         selectedAnswer={quiz.selectedAnswer}
         showResult={quiz.showResult}
         onAnswer={quiz.handleQuizAnswer}
+        onBackToTitle={() => {
+          quiz.resetQuiz();
+          setMode('title');
+        }}
       />
     );
   }
