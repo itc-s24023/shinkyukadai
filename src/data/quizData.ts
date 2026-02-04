@@ -122,5 +122,17 @@ export const QUIZ_DATA_POOL: QuizQuestion[] = [
   { id: 97, question: "太陽系の惑星の数は?", options: ["6個", "7個", "8個", "9個"], correct: 2, timeLimit: 10, category: 'science' },
   { id: 98, question: "日本の三大都市は?", options: ["東京・大阪・福岡", "東京・大阪・名古屋", "東京・京都・大阪", "東京・横浜・大阪"], correct: 1, timeLimit: 12, category: 'geography' },
   { id: 99, question: "オリンピックの五輪マークの色は?", options: ["4色", "5色", "6色", "7色"], correct: 1, timeLimit: 10, category: 'sports' },
-  { id: 100, question: "富士山は何県と何県にまたがる?", options: ["東京都と神奈川県", "静岡県と山梨県", "長野県と山梨県", "静岡県と長野県"], correct: 1, timeLimit: 12, category: 'geography' }
+  { id: 100, question: "富士山は何県と何県にまたがる?", options: ["東京都と神奈川県", "静岡県と山梨県", "長野県と山梨県", "静岡県と長野県"], correct: 1, timeLimit: 12, category: 'geography' },
+  
+  // 音楽
+  { id: 101, question: "ピアノの白鍵の数は?", options: ["52個", "60個", "88個", "100個"], correct: 2, timeLimit: 10, category: 'music' },
+  { id: 102, question: "バイオリンの弦の本数は?", options: ["3本", "4本", "5本", "6本"], correct: 1, timeLimit: 10, category: 'music' },
+  { id: 103, question: "ギターの標準的な弦の本数は?", options: ["4本", "5本", "6本", "7本"], correct: 2, timeLimit: 10, category: 'music' },
+  { id: 104, question: "音階の基本は何ファ?", options: ["5ファ", "7ファ", "8ファ", "12ファ"], correct: 1, timeLimit: 10, category: 'music' },
+  { id: 105, question: "交響曲第5番の作曲者は?", options: ["モーツァルト", "ベートーヴェン", "バッハ", "チャイコフスキー"], correct: 1, timeLimit: 12, category: 'music' },
+  { id: 106, question: "オペラの本場は?", options: ["フランス", "ドイツ", "イタリア", "スペイン"], correct: 2, timeLimit: 10, category: 'music' },
+  { id: 107, question: "クラシック音楽で用いられる楽器でないのは?", options: ["ハープ", "トランペット", "ギター", "ウクレレ"], correct: 3, timeLimit: 10, category: 'music' },
+  { id: 108, question: "音楽の強弱記号pはどういう意味?", options: ["速く", "弱く", "強く", "遅く"], correct: 1, timeLimit: 10, category: 'music' },
+  { id: 109, question: "シンバルは何類の楽器?", options: ["弦楽器", "管楽器", "打楽器", "鍵盤楽器"], correct: 2, timeLimit: 10, category: 'music' },
+  { id: 110, question: "フルートは何でできている?", options: ["木", "金属", "プラスチック", "象牙"], correct: 1, timeLimit: 10, category: 'music' }
 ];

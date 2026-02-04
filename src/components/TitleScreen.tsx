@@ -22,9 +22,8 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
       {/* コンテンツ */}
       <div className="text-center relative z-10">
         <h1 className="text-6xl font-bold text-white mb-4 animate-bounce drop-shadow-lg">
-          🎮 クイズゲーム
+          目指せ！クイズチャンピオン
         </h1>
-        <p className="text-2xl text-white mb-8 font-semibold drop-shadow-md">頭脳を鍛えよう!</p>
         <input
           type="text"
           placeholder="プレイヤー名を入力"
