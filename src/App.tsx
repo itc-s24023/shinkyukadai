@@ -15,6 +15,8 @@ const App = () => {
   // クイズロジック
   const quiz = useQuiz();
 
+  const [currentResult, setCurrentResult] = useState<RankingData | null>(null);
+
   // クイズ完了時の処理
   React.useEffect(() => {
     if (quiz.isQuizComplete()) {
@@ -32,6 +34,7 @@ const App = () => {
       timestamp: new Date().toLocaleString('ja-JP')
     };
 
+    setCurrentResult(rankingData);
     setRankings([...rankings, rankingData].sort((a, b) => b.finalScore - a.finalScore).slice(0, 10));
     setMode('result');
   };
@@ -76,14 +79,18 @@ const App = () => {
         selectedAnswer={quiz.selectedAnswer}
         showResult={quiz.showResult}
         onAnswer={quiz.handleQuizAnswer}
+        onBackToTitle={() => {
+          quiz.resetQuiz();
+          setMode('title');
+        }}
       />
     );
   }
 
-  if (mode === 'result' && rankings.length > 0) {
+  if (mode === 'result' && currentResult) {
     return (
       <ResultScreen
-        result={rankings[0]}
+        result={currentResult}
         onPlayAgain={resetGame}
         onShowRanking={() => setMode('ranking')}
       />
