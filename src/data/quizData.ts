@@ -112,18 +112,7 @@ export const QUIZ_DATA_POOL: QuizQuestion[] = [
   { id: 89, question: "クリスマスは何月?", options: ["11月", "12月", "1月", "2月"], correct: 1, timeLimit: 8, category: 'life' },
   { id: 90, question: "バレンタインデーは何月何日?", options: ["2月14日", "3月14日", "12月25日", "1月1日"], correct: 0, timeLimit: 10, category: 'life' },
   
-  // その他
-  { id: 91, question: "ピアノの鍵盤は白黒合わせて?", options: ["76鍵", "88鍵", "100鍵", "120鍵"], correct: 1, timeLimit: 12, category: 'basic' },
-  { id: 92, question: "時計の針が12時を指すときの角度は?", options: ["0度", "90度", "180度", "360度"], correct: 0, timeLimit: 10, category: 'math' },
-  { id: 93, question: "日本の国花は?", options: ["桜", "梅", "菊", "椿"], correct: 0, timeLimit: 10, category: 'basic' },
-  { id: 94, question: "七夕は何月何日?", options: ["6月7日", "7月7日", "8月7日", "9月7日"], correct: 1, timeLimit: 10, category: 'life' },
-  { id: 95, question: "十二支の最初は?", options: ["牛", "虎", "兎", "鼠"], correct: 3, timeLimit: 10, category: 'basic' },
-  { id: 96, question: "富士山の標高は約何m?", options: ["約2776m", "約3776m", "約4776m", "約5776m"], correct: 1, timeLimit: 12, category: 'geography' },
-  { id: 97, question: "太陽系の惑星の数は?", options: ["6個", "7個", "8個", "9個"], correct: 2, timeLimit: 10, category: 'science' },
-  { id: 98, question: "日本の三大都市は?", options: ["東京・大阪・福岡", "東京・大阪・名古屋", "東京・京都・大阪", "東京・横浜・大阪"], correct: 1, timeLimit: 12, category: 'geography' },
-  { id: 99, question: "オリンピックの五輪マークの色は?", options: ["4色", "5色", "6色", "7色"], correct: 1, timeLimit: 10, category: 'sports' },
-  { id: 100, question: "富士山は何県と何県にまたがる?", options: ["東京都と神奈川県", "静岡県と山梨県", "長野県と山梨県", "静岡県と長野県"], correct: 1, timeLimit: 12, category: 'geography' },
-  
+ 
   // 音楽
   { id: 101, question: "ピアノの白鍵の数は?", options: ["52個", "60個", "88個", "100個"], correct: 2, timeLimit: 10, category: 'music' },
   { id: 102, question: "バイオリンの弦の本数は?", options: ["3本", "4本", "5本", "6本"], correct: 1, timeLimit: 10, category: 'music' },
