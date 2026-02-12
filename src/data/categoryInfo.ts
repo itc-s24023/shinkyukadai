@@ -9,9 +9,8 @@ export const CATEGORY_INFO: Record<QuizCategory, CategoryInfo> = {
   math: { name: '算数', emoji: '🔢', color: 'indigo' },
   animals: { name: '動物', emoji: '🐾', color: 'orange' },
   history: { name: '歴史', emoji: '📜', color: 'amber' },
-  sports: { name: 'スポーツ', emoji: '🎾', color: 'red' },
+  sports: { name: 'スポーツ', emoji: '⚽', color: 'red' },
   food: { name: '食べ物', emoji: '🍱', color: 'pink' },
-  language: { name: '言葉', emoji: '👄', color: 'violet' },
-  life: { name: '生活', emoji: '🏠', color: 'teal' },
-  music: { name: '音楽', emoji: '🎵', color: 'fuchsia' }
+  language: { name: '言葉', emoji: '✏️', color: 'violet' },
+  life: { name: '生活', emoji: '🏠', color: 'teal' }
 };

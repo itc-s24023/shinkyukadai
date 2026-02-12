@@ -2,7 +2,7 @@
 export type GameMode = 'title' | 'category' | 'quiz' | 'result' | 'ranking';
 
 // クイズカテゴリー
-export type QuizCategory = 'random' | 'basic' | 'geography' | 'science' | 'math' | 'animals' | 'history' | 'sports' | 'food' | 'language' | 'life' | 'music';
+export type QuizCategory = 'random' | 'basic' | 'geography' | 'science' | 'math' | 'animals' | 'history' | 'sports' | 'food' | 'language' | 'life';
 
 // クイズ問題の型
 export interface QuizQuestion {
