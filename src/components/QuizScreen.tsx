@@ -26,9 +26,16 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   onAnswer,
   onBackToTitle
 }) => {
+  // 問題インデックスに基づいて背景画像を決定（1-10のサイクル）
+  const backgroundImageIndex = (quizIndex % 10) + 1;
+  const backgroundImage = `/true-false-quiz_${String(backgroundImageIndex).padStart(2, '0')}.png`;
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full bg-white rounded-2xl p-8 shadow-2xl">
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-4" style={{ backgroundImage: `url('${backgroundImage}')` }}>
+      {/* 背景オーバーレイ */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      <div className="max-w-2xl w-full bg-white rounded-2xl p-8 shadow-2xl relative z-10">
         {/* ヘッダー */}
         <div className="flex justify-between items-center mb-6">
           <div className="text-lg font-bold text-gray-800">
