@@ -8,9 +8,9 @@ export const prepareQuizData = (category: QuizCategory = 'random'): QuizQuestion
     ? QUIZ_DATA_POOL 
     : QUIZ_DATA_POOL.filter(q => q.category === category);
   
-  // 問題をランダムに15問選択
+  // 問題をランダムに10問選択
   const shuffled = [...filteredQuestions].sort(() => Math.random() - 0.5);
-  const selected = shuffled.slice(0, Math.min(15, filteredQuestions.length));
+  const selected = shuffled.slice(0, Math.min(10, filteredQuestions.length));
   
   // 各問題の選択肢をシャッフル
   return selected.map(q => {

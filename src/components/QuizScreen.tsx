@@ -63,6 +63,11 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
 
         {/* 選択肢 */}
         <div className="space-y-3">
+          {quizTimer === 0 && showResult && (
+            <div className="bg-red-100 border-2 border-red-500 rounded-lg p-4 mb-4">
+              <p className="text-red-600 font-bold text-center text-lg">時間切れ！不正解です</p>
+            </div>
+          )}
           {currentQ.options.map((option, index) => {
             let bgColor = 'bg-gray-100 hover:bg-gray-200 text-gray-900';
             
@@ -78,8 +83,8 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
               <button
                 key={index}
                 onClick={() => onAnswer(index)}
-                disabled={showResult}
-                className={`w-full p-4 rounded-lg text-left font-bold transition-all transform hover:scale-102 ${bgColor}`}
+                disabled={showResult || quizTimer === 0}
+                className={`w-full p-4 rounded-lg text-left font-bold transition-all transform hover:scale-102 ${bgColor} ${(showResult || quizTimer === 0) ? 'cursor-not-allowed' : 'cursor-pointer'}`}
               >
                 <span className="text-lg">{String.fromCharCode(65 + index)}. {option}</span>
               </button>

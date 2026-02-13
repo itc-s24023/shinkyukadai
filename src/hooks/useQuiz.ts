@@ -19,9 +19,10 @@ export const useQuiz = () => {
       const timer = setTimeout(() => setQuizTimer(quizTimer - 1), 1000);
       return () => clearTimeout(timer);
     } else if (quizData.length > 0 && quizTimer === 0 && !showResult) {
-      handleQuizAnswer(-1);
+      // タイムアップ時は不正解として処理（正解インデックス以外を選択）
+      handleQuizAnswer(quizData[quizIndex].correct === 0 ? 1 : 0);
     }
-  }, [quizTimer, showResult, quizData.length]);
+  }, [quizTimer, showResult, quizData.length, quizIndex, quizData]);
 
   const startQuiz = (category: QuizCategory = 'random') => {
     const newQuizData = prepareQuizData(category);
