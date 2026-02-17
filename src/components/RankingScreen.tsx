@@ -12,8 +12,11 @@ export const RankingScreen: React.FC<RankingScreenProps> = ({
   onBack
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center p-4">
-      <div className="max-w-4xl w-full bg-white rounded-2xl p-8 shadow-2xl">
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-4 relative" style={{ backgroundImage: "url('/istockphoto-1288524484-612x612.jpg')" }}>
+      {/* 背景オーバーレイ */}
+      <div className="absolute inset-0 bg-black/30"></div>
+      
+      <div className="max-w-4xl w-full bg-white rounded-2xl p-8 shadow-2xl relative z-10">
         <h2 className="text-4xl font-bold text-center mb-8 text-gray-900 drop-shadow-sm">
           <Trophy className="inline mr-2 text-yellow-500" />
           ランキング
