@@ -29,7 +29,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           placeholder="プレイヤー名を入力"
           value={playerName}
           onChange={(e) => onPlayerNameChange(e.target.value)}
-          className="px-6 py-3 rounded-lg text-lg mb-4 w-64 text-center text-white font-semibold placeholder-white"
+          className="px-6 py-3 rounded-lg text-lg mb-4 w-64 text-center bg-black text-white font-semibold placeholder-white"
         />
         <div className="space-y-4">
           <button
